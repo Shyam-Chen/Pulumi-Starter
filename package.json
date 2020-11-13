@@ -1,0 +1,16 @@
+{
+  "name": "assembly-starter",
+  "version": "1.0.0",
+  "scripts": {
+    "serve": "onchange -i 'src/**/*' -- yarn build",
+    "build": "rollup -c"
+  },
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^16.0.0",
+    "@rollup/plugin-node-resolve": "^10.0.0",
+    "assemblyscript": "^0.17.2",
+    "rollup": "^2.33.1"
+  }
+}
