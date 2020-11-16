@@ -1,7 +1,7 @@
 import path from 'path';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
-import asc from './rollup-plugin-asc';
+import asc from 'rollup-plugin-asc';
 
 const cpnConfig = (file, mod) => ({
   input: path.join(__dirname, 'src', file),

@@ -11,6 +11,7 @@
     "@rollup/plugin-commonjs": "^16.0.0",
     "@rollup/plugin-node-resolve": "^10.0.0",
     "assemblyscript": "^0.17.2",
-    "rollup": "^2.33.1"
+    "rollup": "^2.33.1",
+    "rollup-plugin-asc": "^0.1.0"
   }
 }

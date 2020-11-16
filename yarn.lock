@@ -229,6 +229,13 @@ resolve@^1.17.0:
     is-core-module "^2.1.0"
     path-parse "^1.0.6"
 
+rollup-plugin-asc@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/rollup-plugin-asc/-/rollup-plugin-asc-0.1.0.tgz#b54d98cdb73bf30bc7c38d47a7db8604d647d781"
+  integrity sha512-lc3fYyXsTnlHQch1ackk68c+29520innl6q1egMJDWVXkXDmeUt4tcEr1aBiLpfXuqbATFDfzIr7N+68Ktr7YQ==
+  dependencies:
+    assemblyscript "^0.17.2"
+
 rollup@^2.33.1:
   version "2.33.1"
   resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.33.1.tgz#802795164164ee63cd47769d8879c33ec8ae0c40"
