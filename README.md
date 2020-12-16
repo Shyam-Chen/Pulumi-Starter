@@ -1,17 +1,23 @@
 # Assembly Starter
 
-## Usage
+## Create WebAssembly
 
 ```sh
+$ git clone https://github.com/Shyam-Chen/Assembly-Starter app-assemblies
+$ cd app-assemblies
+
 $ yarn install
-$ yarn build
+$ yarn serve
 ```
 
-## Git
+## Install in Projects
 
 ```sh
-$ git clone https://github.com/Shyam-Chen/Component-Starter app-assemblies
+$ git clone https://github.com/Shyam-Chen/Assembly-Starter app-assemblies
 $ cd app-assemblies
+
+$ yarn install
+$ yarn build
 ```
 
 ```ts
@@ -23,24 +29,35 @@ $ cd app-assemblies
 ```js
 {
   "name": "<PROJECT_NAME>",
-  "scripts": {
-    "postinstall": "cpx \"../app-assemblies/dist/**/*\" ./node_modules"
+  "dependencies": {
+    "app-assemblies": "file:../app-assemblies"
   }
 }
+```
+
+```sh
+$ pwd
+# path/to/<PROJECT_NAME>
+
+$ yarn install
 ```
 
 ### Node.js
 
 ```js
-import { abs, acos } from 'libm';
+import libm from 'app-assemblies/libm';
+
+libm.abs(-2); // 2
 ```
-
-### Webpack
-
-webassembly-loader
 
 ### Rollup
 
 @rollup/plugin-wasm
 
-## Npm
+```js
+import sample from 'app-assemblies/libm/libm.wasm';
+
+sample().then(({ instance }) => {
+  instance.exports.abs(-2); // 2
+});
+```

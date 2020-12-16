@@ -6,7 +6,7 @@ import asc from 'rollup-plugin-asc';
 const cpnConfig = (file, mod) => ({
   input: path.join(__dirname, 'src', file),
   output: {
-    file: path.join(__dirname, 'dist', file.substring(file.lastIndexOf('.'), 0) + '.js'),
+    file: path.join(__dirname, `dist/${mod}/index.js`),
 
     // format: 'esm',
 
@@ -29,5 +29,6 @@ const cpnConfig = (file, mod) => ({
 
 export default [
   { ...cpnConfig('./libm/libm.ts', 'libm') },
+  { ...cpnConfig('./math-stats/math-stats.ts', 'math-stats') },
   // ...
 ];
