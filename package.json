@@ -2,6 +2,7 @@
   "private": "true",
   "type": "module",
   "scripts": {
+    "ui:type": "pnpm -C packages/ui build",
     "dev:portal": "pnpm -C packages/portal dev --port 8000",
     "build:portal": "pnpm -C packages/portal build",
     "preview:portal": "pnpm -C packages/portal preview --port 8080"

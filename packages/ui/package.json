@@ -18,10 +18,11 @@
   },
   "dependencies": {
     "@unocss/reset": "^0.55.0",
-    "ofetch": "^1.1.1",
+    "date-fns": "^2.30.0",
     "lodash": "^4.17.21",
+    "ofetch": "^1.1.1",
     "vue": "^3.3.4",
-    "vue-formor": "^3.2.1",
+    "vue-formor": "^4.0.0",
     "vue-router": "^4.2.4",
     "vue-storer": "^0.6.0",
     "zod": "^3.21.4"

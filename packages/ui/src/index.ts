@@ -1,3 +1,6 @@
+import 'uno.css';
+
+export { default as XAccordion } from './components/Accordion.vue';
 export { default as XButton } from './components/Button.vue';
 export { default as XLink } from './components/Link.vue';
 export { default as XSwitch } from './components/Switch.vue';

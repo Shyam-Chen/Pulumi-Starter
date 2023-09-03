@@ -6,6 +6,8 @@ import dts from 'vite-plugin-dts';
 import unocss from 'unocss/vite';
 import { presetUno, presetIcons, transformerDirectives } from 'unocss';
 
+import pkg from './package.json';
+
 export default defineConfig({
   define: envify({}),
   build: {
@@ -14,7 +16,7 @@ export default defineConfig({
       formats: ['es'],
     },
     rollupOptions: {
-      external: ['vue'],
+      external: Object.keys(pkg.dependencies),
     },
   },
   plugins: [
