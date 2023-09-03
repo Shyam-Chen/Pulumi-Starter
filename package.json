@@ -1,21 +1,9 @@
 {
-  "name": "assembly-starter",
-  "version": "1.0.0",
+  "private": "true",
+  "type": "module",
   "scripts": {
-    "serve": "rollup -c -w",
-    "build": "rimraf ./dist && rollup -c",
-    "test": "jest"
-  },
-  "main": "index.js",
-  "license": "MIT",
-  "devDependencies": {
-    "@rollup/plugin-commonjs": "^16.0.0",
-    "@rollup/plugin-node-resolve": "^10.0.0",
-    "assemblyscript": "^0.17.2",
-    "babel-jest": "^26.6.3",
-    "jest": "^26.6.3",
-    "rimraf": "^3.0.2",
-    "rollup": "^2.33.1",
-    "rollup-plugin-asc": "^0.1.0"
+    "dev:portal": "pnpm -C packages/portal dev --port 8000",
+    "build:portal": "pnpm -C packages/portal build",
+    "preview:portal": "pnpm -C packages/portal preview --port 8080"
   }
 }
