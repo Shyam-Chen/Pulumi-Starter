@@ -2,7 +2,6 @@
 
 declare namespace NodeJS {
   export interface ProcessEnv {
-    PRODUCT_URL: string;
-    ORDER_URL: string;
+    PORTAL_URL: string;
   }
 }

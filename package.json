@@ -3,8 +3,15 @@
   "type": "module",
   "scripts": {
     "ui:type": "pnpm -C packages/ui build",
+    "api:mock": "pnpm -C packages/api dev",
     "dev:portal": "pnpm -C packages/portal dev --port 8000",
     "build:portal": "pnpm -C packages/portal build",
-    "preview:portal": "pnpm -C packages/portal preview --port 8080"
+    "preview:portal": "pnpm -C packages/portal preview --port 8080",
+    "dev:product": "pnpm -C packages/product dev --port 8001",
+    "build:product": "pnpm -C packages/product build",
+    "preview:product": "pnpm -C packages/product preview --port 8081",
+    "dev:order": "pnpm -C packages/order dev --port 8002",
+    "build:order": "pnpm -C packages/order build",
+    "preview:order": "pnpm -C packages/order preview --port 8082"
   }
 }

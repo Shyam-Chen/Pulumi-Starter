@@ -1,0 +1,34 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite-node -w src/main.ts",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint 'src/**/*.ts' && tsc",
+    "unit": "vitest --dir src --coverage --run"
+  },
+  "dependencies": {
+    "@fastify/one-line-logger": "^1.2.0",
+    "@fastify/sensible": "^5.2.0",
+    "@fastify/type-provider-typebox": "^3.3.0",
+    "@sinclair/typebox": "^0.29.6",
+    "fastify": "^4.22.2",
+    "fastify-plugin": "^4.5.1"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.2.1",
+    "@typescript-eslint/parser": "^6.2.1",
+    "eslint": "^8.46.0",
+    "eslint-config-prettier": "^8.9.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "prettier": "^3.0.0",
+    "process-envify": "^2.0.0",
+    "typescript": "^5.1.6",
+    "vite": "^4.4.8",
+    "vite-node": "^0.34.1",
+    "vite-plugin-fastify": "^1.2.4",
+    "vite-plugin-fastify-routes": "^1.0.1",
+    "vitest": "^0.34.1"
+  }
+}

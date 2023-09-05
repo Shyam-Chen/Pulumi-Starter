@@ -16,5 +16,11 @@ pnpm ui:type
 ```
 
 ```sh
-pnpm dev:portal
+pnpm api:mock
+```
+
+```sh
+$ pnpm dev:portal
+$ pnpm dev:product
+$ pnpm dev:order
 ```

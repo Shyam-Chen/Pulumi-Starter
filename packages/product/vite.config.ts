@@ -8,9 +8,7 @@ import { presetUno, presetIcons, transformerDirectives } from 'unocss';
 
 export default defineConfig({
   define: envify({
-    API_URL: process.env.API_URL ?? '',
-    PRODUCT_URL: process.env.PRODUCT_URL ?? 'http://localhost:8001',
-    ORDER_URL: process.env.ORDER_URL ?? 'http://localhost:8002',
+    PORTAL_URL: process.env.PORTAL_URL ?? 'http://localhost:8000',
   }),
   plugins: [
     vue({
@@ -68,9 +66,5 @@ export default defineConfig({
         ws: true,
       },
     },
-  },
-  test: {
-    globals: true,
-    environment: 'happy-dom',
   },
 });
