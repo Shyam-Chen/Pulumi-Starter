@@ -1,24 +1,31 @@
 <script lang="ts" setup>
-import { ref } from 'vue';
 import { RouterView } from 'vue-router';
 import { XButton } from '@x/ui';
 
-const PORTAL_IFRAME = ref<HTMLIFrameElement>();
-const PORTAL_URL = process.env.PORTAL_URL;
+defineOptions({
+  beforeRouteEnter() {
+    if (!localStorage.getItem('accessToken')) {
+      location.replace(process.env.PORTAL_URL);
+      return false;
+    }
+
+    return true;
+  },
+});
 
 function goToProduct() {
   location.assign('http://localhost:8001');
 }
 
-function signOut() {
-  PORTAL_IFRAME.value?.contentWindow?.postMessage('signOut', PORTAL_URL);
-  location.assign(PORTAL_URL);
+async function signOut() {
+  await fetch('/api/auth/sign-out');
+  // const portal = document.querySelector('#portal') as HTMLIFrameElement;
+  // portal.contentWindow?.postMessage('signOut', process.env.PORTAL_URL);
+  location.assign(process.env.PORTAL_URL);
 }
 </script>
 
 <template>
-  <iframe ref="PORTAL_IFRAME" :src="PORTAL_URL" class="hidden"></iframe>
-
   <div class="p-4">
     <div class="flex gap-3">
       <XButton @click="goToProduct">Go to Product</XButton>

@@ -3,5 +3,6 @@
 declare namespace NodeJS {
   export interface ProcessEnv {
     PORTAL_URL: string;
+    ORDER_URL: string;
   }
 }

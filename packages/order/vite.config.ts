@@ -9,6 +9,7 @@ import { presetUno, presetIcons, transformerDirectives } from 'unocss';
 export default defineConfig({
   define: envify({
     PORTAL_URL: process.env.PORTAL_URL ?? 'http://localhost:8000',
+    PRODUCT_URL: process.env.PRODUCT_URL ?? 'http://localhost:8001',
   }),
   plugins: [
     vue({

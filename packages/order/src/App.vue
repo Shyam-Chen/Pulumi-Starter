@@ -1,16 +1,26 @@
 <script lang="ts" setup>
+import { watch } from 'vue';
 import { RouterView } from 'vue-router';
+import { useDark, useEventSource } from '@vueuse/core';
 
-window.addEventListener('message', (evt) => {
-  if (evt.origin === 'http://localhost:8000') {
-    if (evt.data === 'signOut') {
-      localStorage.removeItem('accessToken');
+useDark();
+
+const { data } = useEventSource('/api/auth');
+
+watch(
+  () => data.value,
+  (val) => {
+    console.log('[portal]', val);
+
+    const parsed = JSON.parse(val || '') as { accessToken: string };
+
+    if (parsed.accessToken) {
+      localStorage.setItem('accessToken', parsed.accessToken);
     } else {
-      const received = JSON.parse(evt.data) as { accessToken: string };
-      localStorage.setItem('accessToken', received.accessToken);
+      localStorage.removeItem('accessToken');
     }
-  }
-});
+  },
+);
 </script>
 
 <template>

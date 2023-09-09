@@ -12,7 +12,7 @@
       "responses/*": ["mock/responses/*"]
     },
     "resolveJsonModule": true,
-    "types": ["vite/client", "vitest"],
+    "types": ["vite/client"],
 
     "noEmit": true,
 
