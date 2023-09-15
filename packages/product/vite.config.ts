@@ -5,20 +5,20 @@ import vue from '@vitejs/plugin-vue';
 import vueRoutes from 'vite-plugin-vue-routes';
 import unocss from 'unocss/vite';
 import { presetUno, presetIcons, transformerDirectives } from 'unocss';
+import qiankun from 'vite-plugin-qiankun';
 
 export default defineConfig({
   define: envify({
+    API_URL: process.env.API_URL ?? 'http://localhost:3000',
     PORTAL_URL: process.env.PORTAL_URL ?? 'http://localhost:8000',
     ORDER_URL: process.env.ORDER_URL ?? 'http://localhost:8002',
   }),
+  server: {
+    port: 8001,
+    cors: true,
+  },
   plugins: [
-    vue({
-      template: {
-        compilerOptions: {
-          isCustomElement: (tag) => tag.includes('-'),
-        },
-      },
-    }),
+    vue(),
     vueRoutes(),
     unocss({
       presets: [presetUno(), presetIcons()],
@@ -54,18 +54,13 @@ export default defineConfig({
         },
       },
     }),
+    qiankun('product', {
+      useDevMode: true,
+    }),
   ],
   resolve: {
     alias: {
       '~': resolve(__dirname, 'src'),
-    },
-  },
-  server: {
-    proxy: {
-      '/api': {
-        target: 'http://127.0.0.1:3000',
-        ws: true,
-      },
     },
   },
 });

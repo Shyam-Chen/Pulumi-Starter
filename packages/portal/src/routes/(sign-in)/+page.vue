@@ -1,24 +1,13 @@
 <script lang="ts" setup>
-import { nextTick } from 'vue';
+import { useRouter } from 'vue-router';
 import { XTextField, XButton, XLink } from '@x/ui';
 
+const router = useRouter();
+
 const signIn = async () => {
-  const accessToken = `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNoeWFtLmNoZW4iLCJ1dWlkIjoiNTM0YmQzOGQtZmE5Ni00ZGYyLWE5M2YtNjU4YmZjODMzYzJmIiwiaWF0IjoxNjkzOTAwMjk5LCJleHAiOjE2OTM5MDE0OTl9.2_KdihnWJga-3xLaz2NcJGiolKjUtzJDYE3tLVguspw`;
-  localStorage.setItem('accessToken', accessToken);
-
-  const data = JSON.stringify({
-    accessToken,
-  });
-
-  await nextTick();
-  await fetch('/api/auth/sign-in');
-  // const product = document.querySelector('#product') as HTMLIFrameElement;
-  // product.contentWindow?.postMessage(data, process.env.PRODUCT_URL);
-
-  // const order = document.querySelector('#order') as HTMLIFrameElement;
-  // order.contentWindow?.postMessage(data, process.env.ORDER_URL);
-
-  location.assign(process.env.PRODUCT_URL);
+  // await fetch('/api/auth/sign-in');
+  localStorage.setItem('token', 'zkfml313');
+  router.push('/product');
 };
 </script>
 

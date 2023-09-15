@@ -12,6 +12,7 @@
     "@x/ui": "workspace:*",
     "lodash": "^4.17.21",
     "ofetch": "^1.3.3",
+    "qiankun": "^2.10.13",
     "valibot": "^0.13.1",
     "vue": "^3.3.4",
     "vue-formor": "^4.0.0",

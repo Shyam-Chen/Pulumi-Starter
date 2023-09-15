@@ -8,18 +8,16 @@ import { presetUno, presetIcons, transformerDirectives } from 'unocss';
 
 export default defineConfig({
   define: envify({
-    API_URL: process.env.API_URL ?? '',
+    API_URL: process.env.API_URL ?? 'http://localhost:3000',
     PRODUCT_URL: process.env.PRODUCT_URL ?? 'http://localhost:8001',
     ORDER_URL: process.env.ORDER_URL ?? 'http://localhost:8002',
   }),
+  server: {
+    port: 8000,
+    cors: true,
+  },
   plugins: [
-    vue({
-      template: {
-        compilerOptions: {
-          isCustomElement: (tag) => tag.includes('-'),
-        },
-      },
-    }),
+    vue(),
     vueRoutes(),
     unocss({
       presets: [presetUno(), presetIcons()],
@@ -59,14 +57,6 @@ export default defineConfig({
   resolve: {
     alias: {
       '~': resolve(__dirname, 'src'),
-    },
-  },
-  server: {
-    proxy: {
-      '/api': {
-        target: 'http://127.0.0.1:3000',
-        ws: true,
-      },
     },
   },
 });

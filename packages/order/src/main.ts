@@ -1,27 +1,35 @@
 import '@unocss/reset/tailwind.css';
 import 'uno.css';
+import type { App as Root } from 'vue';
+import type { QiankunProps } from 'vite-plugin-qiankun/es/helper';
 import { createApp } from 'vue';
+import { renderWithQiankun, qiankunWindow } from 'vite-plugin-qiankun/es/helper';
 
 import router from '~/plugins/router';
 
 import App from './App.vue';
 
-const app = createApp(App);
+let root: Root;
 
-app.use(router);
+function render(props: QiankunProps) {
+  const { container } = props;
+  root = createApp(App);
+  root.use(router);
+  const _container = container ? container.querySelector('#root') : '#root';
+  root.mount(_container);
+}
 
-app.mount('#root');
+renderWithQiankun({
+  mount(props) {
+    render(props);
+  },
+  bootstrap() {},
+  unmount() {
+    root.unmount();
+  },
+  update() {},
+});
 
-const createIframe = (name: string, url: string) => {
-  const iframe = document.createElement('iframe');
-  iframe.id = name;
-  iframe.src = `${url}/channel`;
-  iframe.style.display = 'none';
-  document.body.appendChild(iframe);
-
-  iframe.onload = () => {
-    app.mount('#root');
-  };
-};
-
-// createIframe('portal', process.env.PORTAL_URL);
+if (!qiankunWindow.__POWERED_BY_QIANKUN__) {
+  render({});
+}

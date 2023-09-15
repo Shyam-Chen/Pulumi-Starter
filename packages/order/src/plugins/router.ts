@@ -1,18 +1,12 @@
 import { createWebHistory, createRouter } from 'vue-router';
+import { qiankunWindow } from 'vite-plugin-qiankun/es/helper';
 
 import routes from 'virtual:vue-routes';
 
-import Channel from './Channel.vue';
-
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(qiankunWindow.__POWERED_BY_QIANKUN__ ? '/order' : '/'),
   routes: [
     ...routes,
-
-    {
-      path: '/channel',
-      component: Channel,
-    },
 
     {
       path: '/:slug(.*)*',

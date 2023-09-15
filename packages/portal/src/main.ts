@@ -1,6 +1,7 @@
 import '@unocss/reset/tailwind.css';
 import 'uno.css';
 import { createApp } from 'vue';
+import { registerMicroApps, start } from 'qiankun';
 
 import router from '~/plugins/router';
 
@@ -12,23 +13,19 @@ app.use(router);
 
 app.mount('#root');
 
-const status = Array(2).fill(false);
+registerMicroApps([
+  {
+    name: 'product',
+    entry: 'http://localhost:8001',
+    container: '#subapp-viewport',
+    activeRule: '/product',
+  },
+  {
+    name: 'order',
+    entry: 'http://localhost:8002',
+    container: '#subapp-viewport',
+    activeRule: '/order',
+  },
+]);
 
-const createIframe = (name: string, url: string, uid: number) => {
-  const iframe = document.createElement('iframe');
-  iframe.id = name;
-  iframe.src = `${url}/channel`;
-  iframe.style.display = 'none';
-  document.body.appendChild(iframe);
-
-  iframe.onload = () => {
-    status[uid] = true;
-
-    if (status.every(Boolean)) {
-      app.mount('#root');
-    }
-  };
-};
-
-// createIframe('product', process.env.PRODUCT_URL, 0);
-// createIframe('order', process.env.ORDER_URL, 1);
+start();
