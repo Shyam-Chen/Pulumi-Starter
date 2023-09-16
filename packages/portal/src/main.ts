@@ -16,14 +16,14 @@ app.mount('#root');
 registerMicroApps([
   {
     name: 'product',
-    entry: 'http://localhost:8001',
-    container: '#subapp-viewport',
+    entry: process.env.PRODUCT_URL,
+    container: '#subapp-container',
     activeRule: '/product',
   },
   {
     name: 'order',
-    entry: 'http://localhost:8002',
-    container: '#subapp-viewport',
+    entry: process.env.ORDER_URL,
+    container: '#subapp-container',
     activeRule: '/order',
   },
 ]);

@@ -7,5 +7,5 @@ useDark();
 
 <template>
   <RouterView />
-  <div id="subapp-viewport"></div>
+  <div id="subapp-container"></div>
 </template>

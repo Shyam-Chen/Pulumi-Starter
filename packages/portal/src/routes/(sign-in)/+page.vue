@@ -6,8 +6,9 @@ const router = useRouter();
 
 const signIn = async () => {
   // await fetch('/api/auth/sign-in');
-  localStorage.setItem('token', 'zkfml313');
+  localStorage.setItem('token', crypto.randomUUID());
   router.push('/product');
+  history.pushState({}, '', '/product');
 };
 </script>
 
