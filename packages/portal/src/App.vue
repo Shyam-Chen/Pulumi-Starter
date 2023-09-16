@@ -9,3 +9,7 @@ useDark();
   <RouterView />
   <div id="subapp-container"></div>
 </template>
+
+<style lang="postcss">
+@unocss;
+</style>

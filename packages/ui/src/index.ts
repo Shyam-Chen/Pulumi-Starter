@@ -1,4 +1,4 @@
-import 'uno.css';
+// import 'uno.css';
 
 export { default as XAccordion } from './components/Accordion.vue';
 export { default as XButton } from './components/Button.vue';

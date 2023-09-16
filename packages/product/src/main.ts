@@ -1,5 +1,4 @@
 import '@unocss/reset/tailwind.css';
-import 'uno.css';
 import type { App as Root } from 'vue';
 import type { QiankunProps } from 'vite-plugin-qiankun/es/helper';
 import { createApp } from 'vue';

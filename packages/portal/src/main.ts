@@ -1,5 +1,4 @@
 import '@unocss/reset/tailwind.css';
-import 'uno.css';
 import { createApp } from 'vue';
 import { registerMicroApps, start } from 'qiankun';
 

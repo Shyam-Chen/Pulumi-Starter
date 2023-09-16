@@ -105,6 +105,9 @@ importers:
       '@iconify/json':
         specifier: ^2.2.111
         version: 2.2.111
+      '@unocss/postcss':
+        specifier: ^0.55.7
+        version: 0.55.7(postcss@8.4.29)
       '@vitejs/plugin-vue':
         specifier: ^4.3.4
         version: 4.3.4(vite@4.4.9)(vue@3.3.4)
@@ -184,6 +187,9 @@ importers:
       '@iconify/json':
         specifier: ^2.2.110
         version: 2.2.110
+      '@unocss/postcss':
+        specifier: ^0.55.7
+        version: 0.55.7(postcss@8.4.29)
       '@vitejs/plugin-vue':
         specifier: ^4.3.4
         version: 4.3.4(vite@4.4.9)(vue@3.3.4)
@@ -254,6 +260,9 @@ importers:
       '@iconify/json':
         specifier: ^2.2.111
         version: 2.2.111
+      '@unocss/postcss':
+        specifier: ^0.55.7
+        version: 0.55.7(postcss@8.4.29)
       '@vitejs/plugin-vue':
         specifier: ^4.3.4
         version: 4.3.4(vite@4.4.9)(vue@3.3.4)
@@ -327,6 +336,9 @@ importers:
       '@iconify/json':
         specifier: ^2.2.101
         version: 2.2.110
+      '@unocss/postcss':
+        specifier: ^0.55.7
+        version: 0.55.7(postcss@8.4.29)
       '@vitejs/plugin-vue':
         specifier: ^4.2.3
         version: 4.3.4(vite@4.4.9)(vue@3.3.4)

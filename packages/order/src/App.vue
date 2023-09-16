@@ -8,3 +8,7 @@ useDark();
 <template>
   <RouterView />
 </template>
+
+<style lang="postcss">
+@unocss;
+</style>

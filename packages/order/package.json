@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "@iconify/json": "^2.2.111",
+    "@unocss/postcss": "^0.55.7",
     "@vitejs/plugin-vue": "^4.3.4",
     "@vue/eslint-config-prettier": "^8.0.0",
     "@vue/eslint-config-typescript": "^11.0.3",
