@@ -12,10 +12,6 @@ pnpm install
 ```
 
 ```sh
-pnpm ui:type
-```
-
-```sh
 pnpm api:mock
 ```
 
