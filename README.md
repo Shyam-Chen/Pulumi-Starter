@@ -1,22 +1,33 @@
-# Vue Monorepo
+# Vue Microservices
 
-## Prerequisites
+## Getting Started
 
-- Node.js version 18+
-- PNPM version 8+
+Prerequisites:
 
-## Project Setup
+- Node.js v20
+- PNPM v8
+
+Get started with Vue Microservices.
 
 ```sh
-pnpm install
+# install dependencies
+$ pnpm install
 ```
 
 ```sh
-pnpm api:mock
-```
-
-```sh
+# dev server (in one terminal)
 $ pnpm dev:portal
+```
+
+```sh
+# mock server (in another terminal)
+$ pnpm mock
+```
+
+```sh
+# product service dev server (in another terminal)
 $ pnpm dev:product
+
+# order service dev server (in another terminal)
 $ pnpm dev:order
 ```
