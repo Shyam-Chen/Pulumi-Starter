@@ -1,33 +1,21 @@
-# Vue Microservices
+# Pulumi Starter
+
+🎄 A boilerplate for Cloud applications with Pulumi and Azure using TypeScript on Vite.
+
+:rainbow: View Demo: [Live](https://vue-starter-6fa6.onrender.com) | Windows | macOS | Android | iOS
+
+:octocat: Source Code: [Web-side](https://github.com/Shyam-Chen/Vue-Starter) | [Native-side](https://github.com/Shyam-Chen/Tauri-Starter) | [Server-side](https://github.com/Shyam-Chen/Fastify-Starter) | [Infra-side](https://github.com/Shyam-Chen/Pulumi-Starter)
 
 ## Getting Started
 
 Prerequisites:
 
 - Node.js v20
-- PNPM v8
-
-Get started with Vue Microservices.
-
-```sh
-# install dependencies
-$ pnpm install
-```
+- PNPM v9
+- Docker
+- Pulumi
+- Azure
 
 ```sh
-# dev server (in one terminal)
-$ pnpm dev:portal
-```
-
-```sh
-# mock server (in another terminal)
-$ pnpm mock
-```
-
-```sh
-# product service dev server (in another terminal)
-$ pnpm dev:product
-
-# order service dev server (in another terminal)
-$ pnpm dev:order
+$ pulumi stack select dev
 ```
