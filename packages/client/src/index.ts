@@ -1,15 +1,16 @@
-import * as azureNative from '@pulumi/azure-native';
+import * as azure from '@pulumi/azure-native';
 
 // Create an Azure resource group
-const resourceGroup = new azureNative.resources.ResourceGroup('myResourceGroup');
+export const resourceGroup = new azure.resources.ResourceGroup('myResourceGroup');
 
 // Define the container app environment
-const containerAppEnv = new azureNative.app.ManagedEnvironment('myContainerAppEnv', {
+export const containerAppEnv = new azure.app.ManagedEnvironment('myContainerAppEnv', {
   resourceGroupName: resourceGroup.name,
+  location: resourceGroup.location,
 });
 
 // Create the Azure Container App
-const containerApp = new azureNative.app.ContainerApp('myContainerApp', {
+export const containerApp = new azure.app.ContainerApp('myContainerApp', {
   resourceGroupName: resourceGroup.name,
   managedEnvironmentId: containerAppEnv.id,
   configuration: {

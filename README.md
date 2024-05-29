@@ -1,6 +1,6 @@
 # Pulumi Starter
 
-🎄 A boilerplate for Cloud applications with Pulumi and Azure using TypeScript on Vite.
+🎄 A boilerplate for cloud applications with Pulumi and Azure using TypeScript on Vite.
 
 :rainbow: View Demo: [Live](https://vue-starter-6fa6.onrender.com) | Windows | macOS | Android | iOS
 
