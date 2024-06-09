@@ -1,0 +1,10 @@
+name: Deployment
+
+on: push
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    environment: ${{ github.ref_name }}
+    steps:
+      - uses: actions/checkout@v4

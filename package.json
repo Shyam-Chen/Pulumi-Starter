@@ -2,9 +2,9 @@
   "private": "true",
   "type": "module",
   "scripts": {
-    "lint": "biome check --apply ./packages"
+    "lint": "biome check --write ./packages"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.7.3"
+    "@biomejs/biome": "1.8.0"
   }
 }
