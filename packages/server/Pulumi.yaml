@@ -1,2 +1,6 @@
 name: server
-runtime: nodejs
+runtime:
+  name: nodejs
+  options:
+    typescript: false
+    nodeargs: --import=tsx

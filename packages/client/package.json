@@ -1,18 +1,19 @@
 {
   "private": true,
+  "type": "module",
   "main": "./src/index.ts",
   "scripts": {
     "test": "vitest run"
   },
   "dependencies": {
-    "@pulumi/azure-native": "2.41.0",
-    "@pulumi/docker": "4.5.3",
-    "@pulumi/pulumi": "3.116.1"
+    "@pulumi/azure-native": "2.45.0",
+    "@pulumi/docker": "4.5.4",
+    "@pulumi/pulumi": "3.120.0"
   },
   "devDependencies": {
-    "ts-node": "10.9.2",
+    "tsx": "4.15.6",
     "typescript": "5.4.5",
-    "vite": "5.2.12",
+    "vite": "5.3.1",
     "vitest": "1.6.0"
   }
 }

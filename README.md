@@ -31,6 +31,7 @@ Get started with Pulumi Starter.
 $ pnpm install
 
 $ pulumi stack select dev
+$ pulumi up
 ```
 
 Or use barebones scaffolding for your new Pulumi app
@@ -49,6 +50,25 @@ Follow steps to execute this boilerplate.
 $ pnpm install
 ```
 
+### Select stacks
+
+```sh
+# development
+$ pulumi stack select dev
+
+# stage
+$ pulumi stack select stg
+
+# production
+$ pulumi stack select prod
+```
+
+### Create or update resources
+
+```sh
+$ pulumi up
+```
+
 ## Key Features
 
 This seed repository provides the following features:
@@ -59,6 +79,7 @@ This seed repository provides the following features:
 - [x] [Caddy](https://caddyserver.com/) - Web Server
 - [x] [Docker](https://www.docker.com/) - Containerized Application Development
 - [x] [GitHub Actions](https://github.com/features/actions) - Continuous Integration and Delivery
+- [x] [Azure Container Apps](https://azure.microsoft.com/en-us/products/container-apps) - Serverless Containers
 
 ## Directory Structure
 
