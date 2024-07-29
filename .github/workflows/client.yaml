@@ -1,0 +1,14 @@
+name: Client
+
+on:
+  repository_dispatch:
+    types: [trigger-client-workflow]
+
+jobs:
+  cd:
+    runs-on: ubuntu-latest
+    environment: ${{ github.ref_name }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.client_payload.sha }}
