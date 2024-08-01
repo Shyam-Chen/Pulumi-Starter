@@ -7,8 +7,7 @@ on:
 jobs:
   cd:
     runs-on: ubuntu-latest
-    environment: ${{ github.ref_name }}
     steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: ${{ github.event.client_payload.sha }}
+      - env:
+          SHA: ${{ github.event.client_payload.sha }}
+        run: echo $SHA
