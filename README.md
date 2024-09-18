@@ -30,6 +30,7 @@ Get started with Pulumi Starter.
 # install dependencies
 $ pnpm install
 
+$ pulumi stack init dev
 $ pulumi stack select dev
 $ pulumi up
 ```
@@ -48,6 +49,22 @@ Follow steps to execute this boilerplate.
 
 ```sh
 $ pnpm install
+```
+
+### Initialize stacks
+
+```sh
+# development
+$ pulumi stack init dev
+
+# Test
+$ pulumi stack init sit
+
+# staging
+$ pulumi stack init uat
+
+# production
+$ pulumi stack init prod
 ```
 
 ### Select stacks
@@ -93,9 +110,12 @@ This seed repository provides the following features:
 
 Control the environment.
 
-### Deployment Settings
+### Environment Variables
 
-Stack -> Settings -> Deploy -> Environment variables
+```sh
+$ pulumi stack select <ENV>
+$ pulumi config set <KEY> <VALUE> [--secret]
+```
 
 ## Directory Structure
 
