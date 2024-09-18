@@ -11,7 +11,7 @@
 - [Getting Started](#getting-started)
 - [Project Setup](#project-setup)
 - [Key Features](#key-features)
-- Configuration
+- [Configuration](#configuration)
 - [Directory Structure](#directory-structure)
 
 ## Getting Started
@@ -128,7 +128,17 @@ The structure follows the LIFT Guidelines.
 │   └── server.yaml
 ├── packages
 │   ├── client
+│   │   ├── src
+│   │   │   └── index.ts
+│   │   ├── package.json
+│   │   ├── Pulumi.yaml
+│   │   └── tsconfig.json
 │   └── server
+│       ├── src
+│       │   └── index.ts
+│       ├── package.json
+│       ├── Pulumi.yaml
+│       └── tsconfig.json
 ├── .dockerignore
 ├── .editorconfig
 ├── .gitignore
