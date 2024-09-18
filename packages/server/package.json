@@ -6,14 +6,14 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@pulumi/azure-native": "2.45.0",
-    "@pulumi/docker": "4.5.4",
-    "@pulumi/pulumi": "3.120.0"
+    "@pulumi/azure-native": "2.61.0",
+    "@pulumi/docker": "4.5.5",
+    "@pulumi/pulumi": "3.133.0"
   },
   "devDependencies": {
-    "tsx": "4.15.6",
-    "typescript": "5.4.5",
-    "vite": "5.3.1",
-    "vitest": "1.6.0"
+    "tsx": "4.19.1",
+    "typescript": "5.6.2",
+    "vite": "5.4.6",
+    "vitest": "2.1.1"
   }
 }

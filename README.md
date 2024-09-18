@@ -56,8 +56,11 @@ $ pnpm install
 # development
 $ pulumi stack select dev
 
-# stage
-$ pulumi stack select stg
+# Test
+$ pulumi stack select sit
+
+# staging
+$ pulumi stack select uat
 
 # production
 $ pulumi stack select prod
@@ -73,13 +76,26 @@ $ pulumi up
 
 This seed repository provides the following features:
 
+- ---------- **Essentials** ----------
+- [x] [Pulumi](https://www.pulumi.com/) - Infrastructure as Code and Secrets Management
+- ---------- **Tools** ----------
+- [x] [TypeScript](https://github.com/microsoft/TypeScript) - JavaScript with Syntax for Types
+- [x] [Biome](https://github.com/biomejs/biome) - Formatter and Linter
+- [x] [Vitest](https://github.com/vitest-dev/vitest) - Test Runner
 - ---------- **Environments** ----------
 - [x] [Node.js](https://nodejs.org/en/) - JavaScript Runtime Environment
 - [x] [PNPM](https://pnpm.io/) - Package Manager
-- [x] [Caddy](https://caddyserver.com/) - Web Server
 - [x] [Docker](https://www.docker.com/) - Containerized Application Development
 - [x] [GitHub Actions](https://github.com/features/actions) - Continuous Integration and Delivery
 - [x] [Azure Container Apps](https://azure.microsoft.com/en-us/products/container-apps) - Serverless Containers
+
+## Configuration
+
+Control the environment.
+
+### Deployment Settings
+
+Stack -> Settings -> Deploy -> Environment variables
 
 ## Directory Structure
 
@@ -87,7 +103,9 @@ The structure follows the LIFT Guidelines.
 
 ```coffee
 .
-├── .github/workflows/deployment.yaml
+├── .github/workflows
+│   ├── client.yaml
+│   └── server.yaml
 ├── packages
 │   ├── client
 │   └── server
