@@ -1,0 +1,6 @@
+name: gcloud-client
+runtime:
+  name: nodejs
+  options:
+    typescript: false
+    nodeargs: --import=tsx

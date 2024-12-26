@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "scripts": {
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@pulumi/docker": "4.5.5",
+    "@pulumi/google-native": "0.32.0",
+    "@pulumi/pulumi": "3.133.0"
+  },
+  "devDependencies": {
+    "tsx": "4.19.1",
+    "typescript": "5.6.2",
+    "vite": "5.4.6",
+    "vitest": "2.1.1"
+  }
+}
