@@ -12,7 +12,32 @@ importers:
         specifier: 1.9.1
         version: 1.9.1
 
-  packages/client:
+  packages/az/client:
+    dependencies:
+      '@pulumi/azure-native':
+        specifier: 2.61.0
+        version: 2.61.0(ts-node@10.9.2(@types/node@22.5.5)(typescript@5.6.2))(typescript@5.6.2)
+      '@pulumi/docker':
+        specifier: 4.5.5
+        version: 4.5.5(ts-node@10.9.2(@types/node@22.5.5)(typescript@5.6.2))(typescript@5.6.2)
+      '@pulumi/pulumi':
+        specifier: 3.133.0
+        version: 3.133.0(ts-node@10.9.2(@types/node@22.5.5)(typescript@5.6.2))(typescript@5.6.2)
+    devDependencies:
+      tsx:
+        specifier: 4.19.1
+        version: 4.19.1
+      typescript:
+        specifier: 5.6.2
+        version: 5.6.2
+      vite:
+        specifier: 5.4.6
+        version: 5.4.6(@types/node@22.5.5)
+      vitest:
+        specifier: 2.1.1
+        version: 2.1.1(@types/node@22.5.5)
+
+  packages/az/server:
     dependencies:
       '@pulumi/azure-native':
         specifier: 2.61.0
@@ -45,31 +70,6 @@ importers:
       '@pulumi/google-native':
         specifier: 0.32.0
         version: 0.32.0(ts-node@10.9.2(@types/node@22.5.5)(typescript@5.6.2))(typescript@5.6.2)
-      '@pulumi/pulumi':
-        specifier: 3.133.0
-        version: 3.133.0(ts-node@10.9.2(@types/node@22.5.5)(typescript@5.6.2))(typescript@5.6.2)
-    devDependencies:
-      tsx:
-        specifier: 4.19.1
-        version: 4.19.1
-      typescript:
-        specifier: 5.6.2
-        version: 5.6.2
-      vite:
-        specifier: 5.4.6
-        version: 5.4.6(@types/node@22.5.5)
-      vitest:
-        specifier: 2.1.1
-        version: 2.1.1(@types/node@22.5.5)
-
-  packages/server:
-    dependencies:
-      '@pulumi/azure-native':
-        specifier: 2.61.0
-        version: 2.61.0(ts-node@10.9.2(@types/node@22.5.5)(typescript@5.6.2))(typescript@5.6.2)
-      '@pulumi/docker':
-        specifier: 4.5.5
-        version: 4.5.5(ts-node@10.9.2(@types/node@22.5.5)(typescript@5.6.2))(typescript@5.6.2)
       '@pulumi/pulumi':
         specifier: 3.133.0
         version: 3.133.0(ts-node@10.9.2(@types/node@22.5.5)(typescript@5.6.2))(typescript@5.6.2)

@@ -1,6 +1,6 @@
 # Pulumi Starter
 
-🎄 A boilerplate for cloud applications with Pulumi and Azure using TypeScript on Vite.
+🎄 A boilerplate for cloud applications with Pulumi and Kubernetes using TypeScript on Vite.
 
 :rainbow: View Demo: [Live](https://vue-starter-6fa6.onrender.com) | Windows | macOS | Android | iOS
 
@@ -18,11 +18,11 @@
 
 Prerequisites:
 
-- Node.js v20
-- PNPM v9
-- Docker v4
+- Node.js v22
+- PNPM v10
 - Pulumi v3
-- Azure v2
+- Docker v4
+- Kubernetes v1
 
 Get started with Pulumi Starter.
 
@@ -104,7 +104,6 @@ This seed repository provides the following features:
 - [x] [PNPM](https://pnpm.io/) - Package Manager
 - [x] [Docker](https://www.docker.com/) - Containerized Application Development
 - [x] [GitHub Actions](https://github.com/features/actions) - Continuous Integration and Delivery
-- [x] [Azure Container Apps](https://azure.microsoft.com/en-us/products/container-apps) - Serverless Containers
 
 ## Configuration
 
