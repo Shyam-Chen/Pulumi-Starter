@@ -1,4 +1,4 @@
-name: gcloud-client
+name: k8s
 runtime:
   name: nodejs
   options:

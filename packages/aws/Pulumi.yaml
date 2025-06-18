@@ -1,4 +1,4 @@
-name: client
+name: aws
 runtime:
   name: nodejs
   options:
