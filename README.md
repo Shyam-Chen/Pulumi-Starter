@@ -18,11 +18,12 @@
 
 Prerequisites:
 
-- Node.js v22
+- Node.js v24
 - PNPM v10
 - Pulumi v3
-- Docker v4
+- Docker v27
 - Kubernetes v1
+- Helm v3
 
 Get started with Pulumi Starter.
 
