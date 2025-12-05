@@ -148,3 +148,10 @@ The structure follows the LIFT Guidelines.
 ├── pnpm-workspace.yaml
 └── README.md
 ```
+
+---
+
+### Non-orchestrated Deployment
+
+- Container-based Deployment
+- Host-based Deployment
