@@ -42,6 +42,40 @@ Or use barebones scaffolding for your new Pulumi app
 $ pnpm dlx degit Shyam-Chen/Barebones-Templates/pulumi my-pulumi-app
 ```
 
+### Self-hosted Kubernetes
+
+Prerequisites:
+
+- Ubuntu Server Installation
+- Network Settings
+- SSH Remote Access Settings
+- Repository SSH Key Settings
+- Resource Pool Management
+
+Business:
+
+- Frontend
+- Backend
+- MongoDB
+- MinIO
+- Mailu
+- Redis
+- Worker
+- Qdrant
+- Ollama
+
+Platform:
+
+- GitLab + GitLab Runner
+- Harbor
+- HashiCorp Vault
+- Lens
+- Prometheus/Loki + Grafana
+- Velero + MinIO
+- Longhorn
+- MetalLB + Istio
+- Rancher
+
 ## Project Setup
 
 Follow steps to execute this boilerplate.
@@ -148,10 +182,3 @@ The structure follows the LIFT Guidelines.
 ├── pnpm-workspace.yaml
 └── README.md
 ```
-
----
-
-### Non-orchestrated Deployment
-
-- Container-based Deployment
-- Host-based Deployment
