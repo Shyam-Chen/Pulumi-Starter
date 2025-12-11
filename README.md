@@ -21,7 +21,7 @@ Prerequisites:
 - Node.js v24
 - PNPM v10
 - Pulumi v3
-- Docker v27
+- Docker v29
 - Kubernetes v1
 - Helm v3
 
@@ -49,8 +49,13 @@ Prerequisites:
 - Ubuntu Server Installation
 - Network Settings
 - SSH Remote Access Settings
-- Repository SSH Key Settings
 - Resource Pool Management
+- Repository SSH Key Settings
+- Bucket In MinIO
+
+```sh
+$ pulumi login 's3://<MINIO_BUCKET_NAME>'
+```
 
 Business:
 
